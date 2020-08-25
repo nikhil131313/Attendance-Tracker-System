@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.raju.attendancetracker">
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:name="com.raju.attendancetracker.Notification"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.raju.attendancetracker.Modify_helper"></activity>
+        <activity android:name="com.raju.attendancetracker.view_att_helper1" />
+        <activity android:name="com.raju.attendancetracker.view_att_helper" />
+        <activity android:name="com.raju.attendancetracker.Attendance" />
+        <activity android:name="com.raju.attendancetracker.Subject" />
+        <activity android:name="com.raju.attendancetracker.student_dashboard" />
+        <activity android:name="com.raju.attendancetracker.Student" />
+        <activity
+            android:name="com.raju.attendancetracker.MainActivity"
+            android:theme="@style/splash_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.raju.attendancetracker.DailyService"/>
+        <receiver android:name="com.raju.attendancetracker.ShortAttendanceService"/>
+    </application>
+
+</manifest>
